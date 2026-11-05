@@ -10,8 +10,10 @@
 #include <init.h>
 #include <net.h>
 #include <scmi_agent.h>
+#include <timestamp.h>
 #include <u-boot/crc.h>
 #include <usb.h>
+#include <version.h>
 #include <asm/arch/clock.h>
 #include <asm/arch/sys_proto.h>
 #include <asm/gpio.h>
@@ -267,6 +269,9 @@ int board_late_init(void)
 #endif
 
 	myir_set_data_from_eeprom();
+	env_set("u-boot_version", PLAIN_VERSION " (" U_BOOT_DATE " - "
+		U_BOOT_TIME ")");
+	printf("U-Boot build: %s\n", env_get("u-boot_version"));
 
 	return 0;
 }
