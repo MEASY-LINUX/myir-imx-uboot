@@ -177,7 +177,7 @@ static void netc_init(void)
 		return;
 	}
 
-	pulse_reset("GPIO1_14", "ENET1_RST_B", false);
+	pulse_reset("gpio@20_6", "ENET1_RST_B", false);
 	pulse_reset("GPIO2_30", "ENET2_RST_B", false);
 }
 
