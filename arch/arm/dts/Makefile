@@ -951,6 +951,7 @@ dtb-$(CONFIG_ARCH_IMX8M) += \
 
 dtb-$(CONFIG_ARCH_IMX9) += \
 	imx93-11x11-frdm.dtb \
+	myd-jmx95-15x15.dtb \
 	imx95-15x15-frdm.dtb \
 	imx95-19x19-frdm-pro.dtb \
 	imx95-19x19-verdin.dtb \
