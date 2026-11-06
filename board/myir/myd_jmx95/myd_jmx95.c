@@ -180,7 +180,7 @@ static void netc_init(void)
 	}
 
 	pulse_reset("gpio@20_6", "ENET1_RST_B", true);
-	pulse_reset("GPIO2_30", "ENET2_RST_B", true);
+	pulse_reset("GPIO2_30", "ENET2_RST_B", false);
 }
 
 static void myir_board_init(void)
